@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="text/javascript" src="https://510001847.collect.igodigital.com/collect.js"> </script>
+    <script>
+        function busqueda(valor){
+            _etmc.push(["trackPageView", { "search" : valor }]);
+        }
+    </script>
 </head>
 <body>
     <p>Hola</p>
+    <button onclick="busqueda('Prueba1')">1</button>
+    <button onclick="busqueda('Prueba2')">2</button>
+    <button onclick="busqueda('Prueba3')">3</button>
+    <button onclick="busqueda('Prueba4')">4</button>
+    <button onclick="busqueda('Prueba5')">5</button>
     <script type="text/javascript">
         _etmc.push(["setOrgId", "510001847"]); 
         _etmc.push(["trackPageView"]); 
