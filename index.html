@@ -8,11 +8,19 @@
     <script>
         function busqueda(valor){
             _etmc.push(["trackPageView", { "search" : valor }]);
+            console.log("Search hecho");
+        }
+        function login(valor){
+            _etmc.push(["setUserInfo", {"email": valor}]);
+            console.log("Login hecho")
         }
     </script>
 </head>
 <body>
     <p>Hola</p>
+    <p>Hacer login como Omar</p>
+    <button onclick="login('omar.gonzalez@redk.net')"></button>
+    <p>Busquedas</p>
     <button onclick="busqueda('Prueba1')">1</button>
     <button onclick="busqueda('Prueba2')">2</button>
     <button onclick="busqueda('Prueba3')">3</button>
