@@ -10,6 +10,10 @@
             _etmc.push(["trackPageView", { "search" : valor }]);
             console.log("Search hecho");
         }
+        function view(){
+            _etmc.push(["trackPageView", { "item" : "Odessa"}]);
+            console.log("View hecho");
+        }
         function login(valor){
             _etmc.push(["setUserInfo", {"email": valor}]);
             console.log("Login hecho")
@@ -18,14 +22,15 @@
 </head>
 <body>
     <p>Hola</p>
-    <p>Hacer login como Omar</p>
-    <button onclick="login('omar.gonzalez@redk.net')"></button>
     <p>Busquedas</p>
     <button onclick="busqueda('Prueba1')">1</button>
     <button onclick="busqueda('Prueba2')">2</button>
     <button onclick="busqueda('Prueba3')">3</button>
     <button onclick="busqueda('Prueba4')">4</button>
     <button onclick="busqueda('Prueba5')">5</button>
+    <p>Page view</p>
+    <button onclick="view()">Odessa</button>
+
 
     <div id="Recomendacion"></div>
     <script type="text/javascript">
