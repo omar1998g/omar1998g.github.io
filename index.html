@@ -18,6 +18,19 @@
             _etmc.push(["setUserInfo", {"email": valor}]);
             console.log("Login hecho")
         }
+        function compra(){    
+            _etmc.push(["trackConversion", { "cart": [
+                {"item" : "100", "quantity":  "5" , "price" : "200" ,
+                        "unique_id" : "100" } ,
+                {"item" : "101", "quantity":  "10" , "price" : "5" ,
+                        "unique_id" : "101" }],
+                // OPTIONAL PARAMETERS
+                "order_number" : "0001",
+                "discount" : "5",
+                "shipping" : "5"
+                // END OPTIONAL PARAMETERS       
+            }]);  
+        }
     </script>
 </head>
 <body>
@@ -35,6 +48,10 @@
     <button onclick="view('102')">Alie</button>
     <button onclick="view('103')">Jenda</button>
     <button onclick="view('104')">Meriel</button>
+
+
+    <p>Compra</p>
+    <button onclick="compra()">Compra</button>
 
     <div id="Recomendacion"></div>
     <script type="text/javascript">
